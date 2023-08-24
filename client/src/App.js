@@ -1,11 +1,10 @@
 import './App.css';
+import HeroSection from './Components/Hero';
 
 function App() {
   return (
     <div className="App">
-      <p className="text-red-600">
-         tailwind is working...
-      </p>
+      <HeroSection></HeroSection>
     </div>
   );
 }
