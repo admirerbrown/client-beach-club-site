@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+          'Cormorant-Garamond': ['Cormorant Garamond', 'sans-serif']
+      },
     },
   },
   plugins: [],
