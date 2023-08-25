@@ -1,4 +1,76 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap'); */
+
 .App {
   text-align: center;
 }
 
+.outer {
+  border-radius: 50%;
+  font-size: 1.3rem;
+  border: 1px solid gray;
+  position: absolute;
+  width: 95px;
+  height: 95px;
+}
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+   background-color: #CEE8FF50;
+  line-height: 100px;
+  border-radius: 50%;
+  
+
+  &:hover {
+    cursor: pointer;
+    background: rgba(232, 242, 255, 1);
+  }
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+     background-color: rgb(209, 213, 219, 1);
+    border-radius: 50%;
+    z-index: -1;
+    animation: grow 1s ease-in-out infinite;
+  }
+  &::after {
+    background: rgba(206, 232, 255, 0.4);
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 80px;
+      height: 80px;
+      background: rgb(95, 132, 255);
+      border-radius: 50%;
+      z-index: -1;
+      animation: grow 1s ease-in-out infinite;
+    }
+  }
+  &::before {
+    background: rgba(232, 242, 255, .6);
+    animation-delay: -0.8s;
+  }
+}
+@keyframes grow {
+  0% {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.8, 1.8);
+    opacity: 0;
+  }
+}
