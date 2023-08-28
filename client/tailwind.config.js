@@ -6,10 +6,14 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-          'Cormorant-Garamond': ['Cormorant Garamond', 'sans-serif']
+        'Cormorant-Garamond': ['Cormorant Garamond', 'sans-serif'],
+        'font-family':[ 'IBM Plex Sans',' sans-serif'],
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  variants: {
+    display: ['group-hover']
+  }
 }
 
