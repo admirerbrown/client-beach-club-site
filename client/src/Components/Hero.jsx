@@ -57,3 +57,6 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+
+//TODO: MAKE PAGE RESPONSIVE

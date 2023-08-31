@@ -62,3 +62,5 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
+//TODO: MAKE NAVBAR RESPONSIVE
