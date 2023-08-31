@@ -2,6 +2,7 @@
 
 .App {
   text-align: center;
+  
 }
 
 .outer {
@@ -83,4 +84,8 @@
 .btn-breathe:hover{
   transform: scale(0.9);
   transition: transform .3s ease-in
+}
+
+.new-height{
+  height:450px;
 }
