@@ -55,4 +55,4 @@ const Hero = () => {
 };
 export default Hero;
 
-//TODO: MAKE PAGE RESPONSIVE
+

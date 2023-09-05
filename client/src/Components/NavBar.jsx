@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { MdKeyboardArrowDown } from "react-icons/md";
+
 const NavBar = () => {
   return (
     <div className="">
@@ -56,6 +57,7 @@ const NavBar = () => {
             </button>
           </div>
         </div>
+        
       </div>
     </div>
   );
