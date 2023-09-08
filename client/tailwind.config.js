@@ -9,6 +9,9 @@ module.exports = {
         'Cormorant-Garamond': ['Cormorant Garamond', 'sans-serif'],
         'IBM-Plex-Sans':[ 'IBM Plex Sans',' sans-serif'],
       },
+      backgroundImage: {
+         "bg_image": "url('/public/pg1.png')",
+      }
     },
   },
   plugins: [require("daisyui")],
