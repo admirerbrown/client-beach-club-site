@@ -39,42 +39,40 @@ const Carousel = () => {
   ];
 
   return (
-    <div className="">
-        <div className="flex border border-red-700 mb-10 new-height w-full object-cover ">
-      <div className="absolute grid grid-cols-4 w-full new-height m-15">
+    <div className="border border-red-700 carousel-height object-cover shadow-md">
+      <div className="absolute grid grid-cols-4 carousel-height col-width1">
         {carouselItems.map((item) => (
           <div
             key={item.id}
-            className="carousel-item relative flex flex-col border border-orange-700"
+            className="carousel-item flex flex-col border border-purple-700 relative"
             onMouseOver={() => handleMouseOver(item.image)}
           >
-            <h3 className="font-IBM-Plex-Sans font-normal mt-11 text-xl tracking-widest">
-              {item.title}
-            </h3>
-            <h1 className="capitalize font-semibold text-2xl">
-              {item.description}
-            </h1>
-            <img
-              src={item.image}
-              alt={item.title}
-              className="hidden w-full absolute top-0 left-0 object-cover h-full"
-            />
+            <div className={`banner h-40 ${hoveredImage === item.image ? 'bg-[#E9F5FF]' : 'bg-transparent'}`}>
+              <h3 className="font-IBM-Plex-Sans font-normal mt-11 text-xl tracking-widest">
+                {item.title}
+              </h3>
+              <h1 className="capitalize font-semibold text-2xl">
+                {item.description}
+              </h1>
+            </div>
+
+            {hoveredImage === item.image && (
+              <div className="overlay absolute inset-0 bg-red-500 opacity-50"></div>
+            )}
           </div>
         ))}
       </div>
 
-      <div className="flex w-full items-center justify-center pointer-events-none bg-no-repeat ">
+      <div className="flex w-full items-center justify-center pointer-events-none bg-no-repeat">
         {hoveredImage && (
           <img
             src={hoveredImage}
             alt="Hovered"
-            className="hovered-image w-full h-full"
+            className="hovered-image w-full carousel-height"
           />
         )}
       </div>
     </div>
-    </div>
-    
   );
 };
 
@@ -82,4 +80,3 @@ export default Carousel;
 
 // TODO: CAROUSEL STILL NOT PERFECT AND NEEDS FIX
 // TODO: CHANGE THE HEIGHT OF THE ABOUT SECTION WHICH GOT DESTROYED WHEN NEWHIEGHT WAS CHANGED
-
