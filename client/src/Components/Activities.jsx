@@ -1,6 +1,8 @@
+import Carousel
+ from "./carousel";
 const Activities = () => {
   return (
-    <div className=" bg-height bg-bg_image bg-no-repeat bg-cover w-full mt-40">
+    <div className=" bg-height  bg-[#E9F5FF] w-full mt-40 p-12">
       <div className="flex flex-col    text-[#315779] gap-8 font-Cormorant-Garamond p-6">
         <h3 className="font-IBM-Plex-Sans font-normal mt-11 text-xl tracking-widest">
           TAKE A LOOK
@@ -16,6 +18,10 @@ const Activities = () => {
           sonido de las{" "}
         </p>
       </div>
+      <div className="">
+        <Carousel></Carousel>
+      </div>
+      
     </div>
   );
 };
