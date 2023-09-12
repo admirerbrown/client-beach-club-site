@@ -39,15 +39,19 @@ const Carousel = () => {
   ];
 
   return (
-    <div className="border border-red-700 carousel-height object-cover shadow-md">
-      <div className="absolute grid grid-cols-4 carousel-height col-width1">
+    <div className="border border-red-700 carousel-height object-cover shadow-md img-hover-zoom--blur  ">
+      {/* <div className="absolute grid grid-cols-4 carousel-height col-width1 overflow-hidden">
         {carouselItems.map((item) => (
           <div
             key={item.id}
             className="carousel-item flex flex-col border border-purple-700 relative"
             onMouseOver={() => handleMouseOver(item.image)}
           >
-            <div className={`banner h-40 ${hoveredImage === item.image ? 'bg-[#E9F5FF]' : 'bg-transparent'}`}>
+            <div
+              className={`banner h-40 ${
+                hoveredImage === item.image ? "bg-[#E9F5FF]" : ""
+              }`}
+            >
               <h3 className="font-IBM-Plex-Sans font-normal mt-11 text-xl tracking-widest">
                 {item.title}
               </h3>
@@ -56,21 +60,36 @@ const Carousel = () => {
               </h1>
             </div>
 
+            <div
+              className={` absolute inset-0 bg-blue-700 ${
+                hoveredImage === item.image
+                  ? "duce opacity-5 "
+                  : "hover04 opacity-60"
+              }`}
+            ></div>
+
             {hoveredImage === item.image && (
-              <div className="overlay absolute inset-0 bg-red-500 opacity-50"></div>
+              <div className="overlay absolute inset-0 bg-blue-700 opacity-50"></div>
             )}
           </div>
         ))}
-      </div>
+      </div> */}
 
-      <div className="flex w-full items-center justify-center pointer-events-none bg-no-repeat">
+      {/* <div className="">
         {hoveredImage && (
           <img
             src={hoveredImage}
             alt="Hovered"
-            className="hovered-image w-full carousel-height"
+            className={`hovered-image w-full carousel-height`}
           />
         )}
+      </div> */}
+      <div className="img-hover-zoom img-hover-zoom--xyz">
+        <img
+            src={friends}
+            alt="Hovered"
+            className={`hovered-image w-full carousel-height`}
+          />
       </div>
     </div>
   );
