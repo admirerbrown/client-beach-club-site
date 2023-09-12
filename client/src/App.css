@@ -21,10 +21,9 @@
   transform: translate(-50%, -50%);
   width: 80px;
   height: 80px;
-   background-color: #CEE8FF50;
+  background-color: #cee8ff50;
   line-height: 100px;
   border-radius: 50%;
-  
 
   &:hover {
     cursor: pointer;
@@ -39,7 +38,7 @@
     left: 0;
     width: 80px;
     height: 80px;
-     background-color: rgb(209, 213, 219, 1);
+    background-color: rgb(209, 213, 219, 1);
     border-radius: 50%;
     z-index: -1;
     animation: grow 1s ease-in-out infinite;
@@ -62,7 +61,7 @@
     }
   }
   &::before {
-    background: rgba(232, 242, 255, .6);
+    background: rgba(232, 242, 255, 0.6);
     animation-delay: -0.8s;
   }
 }
@@ -77,32 +76,73 @@
   }
 }
 
-.btn-breathe{
+.btn-breathe {
   transform: scale(1);
-  transition: transform .3s ease-in
+  transition: transform 0.3s ease-in;
 }
 
-.btn-breathe:hover{
+.btn-breathe:hover {
   transform: scale(0.9);
-  transition: transform .3s ease-in
+  transition: transform 0.3s ease-in;
 }
 
-.new-height{
-  height:700px;
+.new-height {
+  height: 700px;
 }
 
-.fw{
+.fw {
   font-weight: 600px;
 }
-.carousel-height{
+.carousel-height {
   height: 750px;
 }
-.bg-height{
+.bg-height {
   height: 800px;
 }
-.col-width1{
+.col-width1 {
   width: 1809px;
 }
 
+.overlay {
+  transform: translateY(0%);
+  transition: transform 0.4s ease-in-out;
+}
 
+.overlay:hover {
+  transform: translateY(21.5%);
+}
 
+.hover-scale:hover {
+  /* transform: scale(-1.2); */
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  /* transform: scale(0.9, 0.9); */
+  /* animation: grow 1s ease-in-out infinite; */
+  overflow: hidden;
+}
+
+.hover04 {
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+.duce {
+  transform: translateY(21.5%);
+}
+
+.img-hover-zoom {
+  overflow: hidden;
+  position: relative; /* Add this to make sure child elements stay within the parent container */
+}
+
+/* Blur-zoom Container */
+.img-hover-zoom--blur img {
+  transition: transform 1s, filter 2s ease-in-out;
+  transform: scale(1.2);
+  transform-origin: center; /* Adjust the transform-origin property to scale from the center */
+}
+
+/* The Transformation */
+.img-hover-zoom--blur:hover img {
+  transform: scale(1);
+}
