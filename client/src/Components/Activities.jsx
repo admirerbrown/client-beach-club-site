@@ -1,5 +1,4 @@
-import Carousel
- from "./carousel";
+// import Carousel from "./carousel";
 const Activities = () => {
   return (
     <div className=" bg-height  bg-[#E9F5FF] w-full mt-40 p-12">
@@ -18,10 +17,7 @@ const Activities = () => {
           sonido de las{" "}
         </p>
       </div>
-      <div className="">
-        <Carousel></Carousel>
-      </div>
-      
+      <div className="">{/* <Carousel></Carousel> */}</div>
     </div>
   );
 };

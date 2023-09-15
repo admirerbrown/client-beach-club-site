@@ -2,7 +2,7 @@ import './App.css';
 import Hero from './Components/Hero';
 import About from './Components/About';
 import Activities from './Components/Activities';
-// import Carousel from './Components/carousel';
+import Offerings from './Components/Offers';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Hero></Hero>
       <About></About>
       <Activities></Activities>
-     {/* <Carousel></Carousel> */}
+     <Offerings></Offerings>
     </div>
   );
 }
