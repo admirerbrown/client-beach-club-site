@@ -8,6 +8,10 @@ const Carousel = () => {
     setHoveredImage(image);
   };
 
+  // const handleMouseOut = () => {
+  //   setHoveredImage(); // Reset the hoveredImage when moving out of the grid
+  // };
+
   const carouselItems = [
     {
       id: 1,
@@ -39,12 +43,22 @@ const Carousel = () => {
   ];
 
   return (
-    <div className="border border-red-700 carousel-height object-cover shadow-md img-hover-zoom--blur  ">
-      {/* <div className="absolute grid grid-cols-4 carousel-height col-width1 overflow-hidden">
+    <div className={`"border border-red-700 carousel-height object-cover shadow-md relative " ${hoveredImage ? "img-hover-zoom--blur":""}`}>
+      {hoveredImage && (
+        <div className={` ${hoveredImage ? "img-hover-zoom" : ""}`}>
+          <img
+            src={hoveredImage}
+            alt="Hovered"
+            className="hovered-image w-full carousel-height "
+          />
+        </div>
+      )}
+
+      <div className="absolute grid grid-cols-4 carousel-height col-width1 overflow-hidden ">
         {carouselItems.map((item) => (
           <div
             key={item.id}
-            className="carousel-item flex flex-col border border-purple-700 relative"
+            className="carousel-item flex flex-col border border-purple-700 relative "
             onMouseOver={() => handleMouseOver(item.image)}
           >
             <div
@@ -61,7 +75,7 @@ const Carousel = () => {
             </div>
 
             <div
-              className={` absolute inset-0 bg-blue-700 ${
+              className={`absolute inset-0 bg-blue-700 ${
                 hoveredImage === item.image
                   ? "duce opacity-5 "
                   : "hover04 opacity-60"
@@ -73,24 +87,15 @@ const Carousel = () => {
             )}
           </div>
         ))}
-      </div> */}
-
-      {/* <div className="">
-        {hoveredImage && (
-          <img
-            src={hoveredImage}
-            alt="Hovered"
-            className={`hovered-image w-full carousel-height`}
-          />
-        )}
-      </div> */}
-      <div className="img-hover-zoom img-hover-zoom--xyz">
-        <img
-            src={friends}
-            alt="Hovered"
-            className={`hovered-image w-full carousel-height`}
-          />
       </div>
+
+      {/* <div className="img-hover-zoom img-hover-zoom--xyz">
+        <img
+          src={friends}
+          alt="Hovered"
+          className={`hovered-image w-full carousel-height`}
+        />
+      </div> */}
     </div>
   );
 };

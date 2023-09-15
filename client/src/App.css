@@ -112,14 +112,11 @@
   transform: translateY(21.5%);
 }
 
-.hover-scale:hover {
-  /* transform: scale(-1.2); */
+/* .hover-scale:hover {
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-  /* transform: scale(0.9, 0.9); */
-  /* animation: grow 1s ease-in-out infinite; */
   overflow: hidden;
-}
+} */
 
 .hover04 {
   -webkit-transition: 0.4s ease-in-out;
@@ -132,17 +129,18 @@
 
 .img-hover-zoom {
   overflow: hidden;
-  position: relative; /* Add this to make sure child elements stay within the parent container */
 }
 
 /* Blur-zoom Container */
 .img-hover-zoom--blur img {
+  -webkit-transition: 0.4s ease-in-out;
   transition: transform 1s, filter 2s ease-in-out;
   transform: scale(1.2);
-  transform-origin: center; /* Adjust the transform-origin property to scale from the center */
+  transform-origin: center; 
 }
 
 /* The Transformation */
-.img-hover-zoom--blur:hover img {
+.img-hover-zoom--blur:hover img  {
   transform: scale(1);
 }
+
