@@ -29,23 +29,23 @@ const Offerings = () => {
   ];
   return (
     <div className="w-full flex flex-col gap-6 mt-24 2xl:items-center ">
-      <div className="w-full px-5 font-Cormorant-Garamond flex flex-col gap-5">
-        <h3 className="capitalize text-2xl xl:text-3xl tracking-widest font-medium text-[#315779]">
+      <div className="w-full px-5 font-Cormorant-Garamond flex flex-col gap-5 2xl:w-2/3 2xl:px-0 ">
+        <h3 className="capitalize text-2xl xl:text-3xl tracking-widest font-medium text-[#315779] xl:text-start xl:pl-5 2xl:pl-0">
           let's pamper yourself
         </h3>
-        <h1 className="text-3xl font-semibold md:text-4xl xl:text-5xl md:ml-5 text-[#315779] text-left leading-10 mb-6 ">
+        <h1 className="text-3xl font-semibold md:text-4xl xl:text-5xl md:ml-5 text-[#315779] text-left leading-10 mb-6 2xl:ml-0">
           Find Your Perfect Escape by the Enthralling SeaSide
         </h1>
       </div>
 
       {data.map((item, index) => (
-        <div className="flex flex-col gap-7 border mx-5 mt-4 p-5 shadow-sm xl:flex-row xl:gap-12 xl:mx-10 2xl:w-3/4 ">
+        <div className="flex flex-col gap-7 border mx-5 mt-4 p-5 shadow-sm xl:flex-row xl:gap-12 xl:mx-10 2xl:w-2/3 2xl:gap-20 ">
           <div className="object-cover ">
             <img className="w-full md:h-96 xl:h-full" src={item.imageUrl} alt="" />
           </div>
           <div>
             <div key={index + 1}>
-              <h2 className="capitalize text-3xl tracking-wide font-semibold font-Cormorant-Garamond text-[#315779] leading-10">
+              <h2 className="capitalize text-3xl tracking-wide font-semibold font-Cormorant-Garamond lg:text-start text-[#315779] leading-10">
                 {item.title}
               </h2>
               <p className="font-IBM-Plex-Sans text-[#315779] text-sm xl:text-lg xl:text-start mt-2">
@@ -75,7 +75,7 @@ const Offerings = () => {
               </ul>
             </div>
             <div className="mt-7">
-              <h2 className="font-Cormorant-Garamond capitalize text-2xl  mb-5 font-semibold text-[#315779]">
+              <h2 className="font-Cormorant-Garamond capitalize text-2xl  mb-5 font-semibold text-[#315779] lg:text-start">
                 additional benefits
               </h2>
               <div className="flex flex-col gap-2  md:flex-row md:gap-40 justify-center ">
