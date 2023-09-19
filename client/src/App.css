@@ -112,6 +112,10 @@
   transform: translateY(21.5%);
 }
 
+.offer_img{
+  height: 450px;
+}
+
 /* .hover-scale:hover {
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
