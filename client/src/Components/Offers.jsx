@@ -1,32 +1,10 @@
 import { IoIosPeople } from "react-icons/io";
 import { FaDollarSign, FaSun, FaCocktail } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa6";
+import { offers } from "../db/offerData";
 
 const Offerings = () => {
-  const data = [
-    {
-      imageUrl:
-        "https://img.freepik.com/free-photo/sunset-pool_1203-3192.jpg?size=626&ext=jpg&ga=GA1.1.865150467.1694076383&semt=sph",
-      title: "Velvet Waves Lounge",
-      description:
-        "Lounge est un endroit enchanteur où l'élégance rencontre .",
-      peopleData: [{ text1: "4-6 Person" }, { text2: "$100 Min Spend" }],
-    },
-    {
-      imageUrl:
-        "https://img.freepik.com/premium-photo/interior-exterior-design-pool-villa-which-features-living-area_41487-217.jpg?size=626&ext=jpg&ga=GA1.1.865150467.1694076383&semt=sph",
-      title: "Blissful Haven 360",
-      description: "Quis autem vel eum iure reprehenderit qui voluptatares.",
-      peopleData: [{ text1: "5-8 Person" }, { text2: "$180 Min Spend" }],
-    },
-    {
-      imageUrl:
-        "https://img.freepik.com/free-photo/beautiful-umbrella-chair-around-swimming-pool-hotel-resort_74190-1006.jpg?size=626&ext=jpg&ga=GA1.1.865150467.1694076383&semt=sph",
-      title: "The Tranquil Retreat",
-      description: "Quis autem vel eum iure reprehenderit qui voluptatares.",
-      peopleData: [{ text1: "5-10 Person" }, { text2: "$250 Min Spend" }],
-    },
-  ];
+  const data = offers;
   return (
     <div className="w-full flex flex-col gap-6 mt-24 2xl:items-center ">
       <div className="w-full px-5 font-Cormorant-Garamond flex flex-col gap-5 2xl:w-2/3 2xl:px-0 ">
@@ -39,9 +17,13 @@ const Offerings = () => {
       </div>
 
       {data.map((item, index) => (
-        <div className="flex flex-col gap-7 border mx-5 mt-4 p-5 shadow-sm xl:flex-row xl:gap-12 xl:mx-10 2xl:w-2/3 2xl:gap-20 ">
+        <div className="xl:sticky xl:top-0 xl:bg-white flex flex-col gap-7 border mx-5 p-5 shadow-sm xl:flex-row xl:gap-12 xl:mx-10 2xl:w-2/3 2xl:gap-20 ">
           <div className="object-cover ">
-            <img className="w-full md:h-96 xl:h-full" src={item.imageUrl} alt="" />
+            <img
+              className="w-full md:h-96 xl:h-full"
+              src={item.imageUrl}
+              alt="offer thumbnail"
+            />
           </div>
           <div>
             <div key={index + 1}>
@@ -52,7 +34,10 @@ const Offerings = () => {
                 {item.description}
               </p>
             </div>
-            <div key={index + 2} className="flex flex-col md:flex-row w-full mt-7">
+            <div
+              key={index + 2}
+              className="flex flex-col md:flex-row w-full mt-7"
+            >
               <ul className=" font-IBM-Plex-Sans font-semibold text-sm w-full">
                 <li className="border h-12 flex justify-center items-center text-[#315779] gap-3">
                   <IoIosPeople className="text-xl text-[#A7D6FF]" />
@@ -85,7 +70,7 @@ const Offerings = () => {
                     <p className="">cold face towel</p>
                   </li>
 
-                  <li className="   flex justify-center items-center font-light text-[#315779] gap-2 ">
+                  <li className="flex justify-center items-center font-light text-[#315779] gap-2 ">
                     <FaCheck className="text-lg text-[#A7D6FF]"></FaCheck>
                     <p>free flow water</p>
                   </li>
@@ -126,5 +111,3 @@ const Offerings = () => {
 };
 
 export default Offerings;
-
-//TODO: MAKE THIS FEATURE RESPONSIVE
