@@ -10,7 +10,7 @@ function App() {
       <Hero></Hero>
       <About></About>
       <Activities></Activities>
-     <Offerings></Offerings>
+      <Offerings></Offerings>
     </div>
   );
 }

@@ -43,7 +43,11 @@ const Carousel = () => {
   ];
 
   return (
-    <div className={`"border border-red-700 carousel-height object-cover shadow-md relative " ${hoveredImage ? "img-hover-zoom--blur":""}`}>
+    <div
+      className={`"border border-red-700 carousel-height object-cover shadow-md relative " ${
+        hoveredImage ? "img-hover-zoom--blur" : ""
+      }`}
+    >
       {hoveredImage && (
         <div className={` ${hoveredImage ? "img-hover-zoom" : ""}`}>
           <img
