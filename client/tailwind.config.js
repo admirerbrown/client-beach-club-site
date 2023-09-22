@@ -7,14 +7,14 @@ module.exports = {
     extend: {
       fontFamily: {
         'Cormorant-Garamond': ['Cormorant Garamond', 'sans-serif'],
-        'IBM-Plex-Sans':[ 'IBM Plex Sans',' sans-serif'],
+        'IBM-Plex-Sans': ['IBM Plex Sans', ' sans-serif'],
       },
       backgroundImage: {
-         "bg_image": "url('/public/pg1.png')",
+        "bg_image": "url('/public/pg1.png')",
       }
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), require('@tailwindcss/forms')],
   variants: {
     display: ['group-hover']
   }
