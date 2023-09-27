@@ -35,17 +35,17 @@ const RenderMenu = () => {
   ];
 
   return (
-    <div className=" pt-10">
+    <div className=" pt-10 xl:mt-20 flex flex-col justify-center items-center">
       <div className="font-Cormorant-Garamond  justify-center flex flex-col p-5 capitalize gap-7 w-full items-center">
-        <h2 className=" text-2xl md:text-lg md:font-semibold font-IBM-Plex-Sans tracking-[5px] uppercase font-medium text-[#315779] xl:pl-5 2xl:pl-0">
+        <h2 className=" text-base md:text-lg md:font-semibold font-IBM-Plex-Sans tracking-[5px] uppercase font-medium text-[#315779] xl:pl-5 2xl:pl-0">
           check our menu
         </h2>
-        <h1 className="text-[29px] font-semibold xl:font-bold xl:leading-[60px]  md:text-4xl xl:text-[43px] xl:w-[62%] xl:mx-0 xl:text-center md:mx-20 lg:mx-32 text-[#315779] leading-10 md:leading-[50px] mb-6 tracking-widest 2xl:ml-0">
+        <h1 className="text-[29px] font-semibold xl:font-bold xl:leading-[60px] md:text-4xl xl:text-[43px] 2xl:text-[38px] xl:w-[62%] 2xl:w-1/2 xl:mx-0 xl:text-center md:mx-20 lg:mx-32 text-[#315779] leading-10 md:leading-[50px] mb-6 tracking-widest 2xl:ml-0">
           Savor the Coastal Delights, Bask in Sunshine, with a Wave of Beach
           Vibes.
         </h1>
       </div>
-      <div className="flex flex-wrap justify-center gap-5 mt-4 xl:gap-5 mb-4">
+      <div className="flex flex-wrap justify-center gap-5 mt-4 xl:gap-5 mb-4 2xl:mt-7">
         {menu.map((item, index) => (
           <div
             key={index + 1}
@@ -64,7 +64,7 @@ const RenderMenu = () => {
           </div>
         ))}
       </div>
-      <div className="mt-16 flex flex-col md:flex-row flex-wrap items-center justify-center px-5 md:px-0 gap-5 md:gap-8 xl:flex-nowrap xl:px-14">
+      <div className="mt-16 flex w-full flex-col md:flex-row flex-wrap items-center justify-center px-5 md:px-0 gap-5 md:gap-8 xl:flex-nowrap xl:px-14 2xl:w-[68%]">
         <MenuItems></MenuItems>
       </div>
     </div>
@@ -97,7 +97,7 @@ const MenuItems = () => {
               <h4 className="flex justify-between w-full text-xl md:text-[22px] font-semibold">
                 {item.name} <span>{item.price}</span>
               </h4>
-              <p className="text-left text-sm md:text-[15px] md:leading-6 font-thin font-IBM-Plex-Sans">
+              <p className="text-left text-sm md:text-[15px] md:leading-6 font-thin font-IBM-Plex-Sans text-[#89949f]">
                 {item.description}
               </p>
             </div>
