@@ -1,3 +1,5 @@
+import { foodList } from "../db/menuItems";
+
 const RenderMenu = () => {
   const menu = [
     {
@@ -62,7 +64,7 @@ const RenderMenu = () => {
           </div>
         ))}
       </div>
-      <div>
+      <div className="mt-16">
         <MenuItems></MenuItems>
       </div>
     </div>
@@ -72,15 +74,36 @@ const RenderMenu = () => {
 const MenuItems = () => {
   return (
     <>
-      <div className=" h-[570px] w-[400px] border-2 border-red-600">
-        <div className=" h-14 border flex justify-center items-center" >
-            <h2 className="">Yummy Snack</h2>
+      {Object.keys(foodList).map((category) => (
+        <div key={category} className="border m-5">
+          <div
+            className={`${
+              foodList[category][0].title === "Delicious Food"
+                ? "bg-[#315779] text-white"
+                : "bg-[#E9F5FF]  text-[#315779]"
+            } h-16 flex justify-center items-center border-b mb-3 `}
+          >
+            <h2 className=" font-Cormorant-Garamond text-xl font-semibold">
+              {foodList[category][0].title}
+            </h2>
+          </div>
+          {foodList[category].slice(1).map((item, index) => (
+            <div
+              key={index}
+              className={`${
+                index === foodList[category].length - 2 ? "border-none" : ""
+              } h-24 border-b-2 justify-center flex  text-[#315779] flex-col mx-7 border-dotted font-Cormorant-Garamond`}
+            >
+              <h4 className="flex justify-between w-full text-xl font-semibold">
+                {item.name} <span>{item.price}</span>
+              </h4>
+              <p className="text-left text-sm font-thin font-IBM-Plex-Sans">
+                {item.description}
+              </p>
+            </div>
+          ))}
         </div>
-        <div className=" h-24 border justify-center flex flex-col mx-5" >
-            <h4 className="flex justify-between w-full">Classic Nachos<span>$16</span></h4>
-            <p className="text-left">Consecte adipi elit.</p>
-        </div>
-      </div>
+      ))}
     </>
   );
 };
