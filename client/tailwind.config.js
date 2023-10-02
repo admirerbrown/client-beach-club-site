@@ -10,7 +10,7 @@ module.exports = {
         'IBM-Plex-Sans': ['IBM Plex Sans', ' sans-serif'],
       },
       backgroundImage: {
-        "bg_image": "url('/public/pg1.png')",
+        "bg_image": "url('https://img.freepik.com/free-photo/best-friends-singing-beach_23-2148651339.jpg?size=626&ext=jpg&ga=GA1.1.865150467.1694076383&semt=ais')",
       }
     },
   },
