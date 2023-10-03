@@ -9,7 +9,7 @@ import RenderTestimonials from './Components/Testimonials';
 
 function App() {
   return (
-    <div className="App w-full">
+    <div className="App">
       <Hero></Hero>
       <About></About>
       <Activities></Activities>
