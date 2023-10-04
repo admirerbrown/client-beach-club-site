@@ -10,7 +10,7 @@ module.exports = {
         'IBM-Plex-Sans': ['IBM Plex Sans', ' sans-serif'],
       },
       backgroundImage: {
-        "bg_image": "url('https://img.freepik.com/free-photo/best-friends-singing-beach_23-2148651339.jpg?size=626&ext=jpg&ga=GA1.1.865150467.1694076383&semt=ais')",
+        "bg_image": "url('https://img.freepik.com/free-photo/happy-people-dancing-with-beer-bottles_74855-2290.jpg?size=626&ext=jpg&ga=GA1.1.865150467.1694076383&semt=ais')",
       }
     },
   },
