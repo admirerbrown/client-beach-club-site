@@ -28,7 +28,7 @@ const CommentCard = ({ commentList }) => {
                     <div className="absolute flex shadow-md h-[105px] w-[105px] p-1.5 overflow-hidden rounded-full border-2 border-white bg-white dark:border-neutral-800 dark:bg-neutral-800 -bottom-10">
                         <img className='w-full h-full object-cover rounded-full' src={person.image} alt='' />
                     </div>
-                    <div className='absolute flex flex-col items-center justify-center mt-32 pt-8 flex-nowrap'>
+                    <div className='absolute flex flex-col items-center justify-center mt-32  flex-nowrap'>
                         <p className='whitespace-nowrap name w-full items-end text-[22px] leading-[28px] font-medium'>{person.name}</p>
                         <p className='items-end text-xs tracking-[5px] uppercase'>Visitors</p>
                     </div>
@@ -51,6 +51,5 @@ const CommentCard = ({ commentList }) => {
         </div>
     );
 };
-
 
 export default RenderTestimonials;
