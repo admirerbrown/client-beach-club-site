@@ -8,11 +8,41 @@ import {
   FaInstagram,
 } from "react-icons/fa6";
 import { RiWhatsappFill } from "react-icons/ri";
+import { ImMap2 } from "react-icons/im";
+import { LuMailOpen } from "react-icons/lu";
+
+
+
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col p-5 bg-[#315779] text-stone-200 text-sm w-full  ">
-      <div className=" xl:flex items-start justify-start">
+    <footer className="flex flex-col p-5 bg-[#315779] text-stone-200 text-sm w-full items-center ">
+      <div className="bg-white border  flex flex-col gap-4 absolute w-[88%] 2xl:w-[65%] transform -translate-y-1/2 -translate-x-0 p-4">
+        <div className="text-center p-6 bg-[#E9F5FF] shadow-sm flex flex-col items-center h-full ">
+          <div className="bg-white w-[68px] h-[72px] flex items-center justify-center ">
+            <ImMap2 className="text-[36px] text-[rgb(88,105,130)]"></ImMap2>
+          </div>
+          <p className="text-[#315779] text-[25px] font-Cormorant-Garamond mt-6">Our Location</p>
+          <p className="text-[#8c9aa6] text-sm font-IBM-Plex-San mt-3 ">Jl. Segara Ayu Sanur, Denpasar Selatan, Bali</p>
+        </div>
+
+        <div className="text-center p-6 bg-[#E9F5FF] shadow-sm flex flex-col items-center h-full ">
+          <div className="bg-white w-[68px] h-[72px] flex items-center justify-center ">
+            <LuMailOpen className="text-[36px] text-[rgb(88,105,130)]"></LuMailOpen>
+          </div>
+          <p className="text-[#315779] text-[25px] font-Cormorant-Garamond mt-6">Our Email</p>
+          <p className="text-[#8c9aa6] text-sm font-IBM-Plex-San mt-3">Support@malibu.com | info@booking.com</p>
+        </div>
+
+        <div className="text-center p-6 bg-[#E9F5FF] shadow-sm flex flex-col items-center h-full ">
+          <div className="bg-white w-[68px] h-[72px] flex items-center justify-center ">
+            <BsTelephone className="text-[36px] text-[rgb(88,105,130)]"></BsTelephone>
+          </div>
+          <p className="text-[#315779] text-[25px] font-Cormorant-Garamond mt-6">Our Phone</p>
+          <p className="text-[#8c9aa6] text-sm font-IBM-Plex-San mt-3">P1 : (+62) 8896-2220 <span> P2: (+62) 81 6754 345</span></p>
+        </div>
+      </div>
+      <div className=" xl:flex items-start justify-start mt-40">
         <div className="flex gap-5 flex-col items-start mb-10 md:items-center md:text-center xl:items-start">
           <img src="" alt="logo" />
           <p className="text-sm font-IBM-Plex-San text-start md:text-center md:text-base md:w-[60%] xl:w-[80%] xl:text-start xl:text-sm">
