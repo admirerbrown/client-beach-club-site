@@ -29,7 +29,7 @@ const CommentCard = ({ commentList }) => {
                         <img className='w-full h-full object-cover rounded-full' src={person.image} alt='' />
                     </div>
                     <div className='absolute flex flex-col items-center justify-center mt-32  flex-nowrap'>
-                        <p className='whitespace-nowrap name w-full items-end text-[22px] leading-[28px] font-medium'>{person.name}</p>
+                        <p className='whitespace-nowrap w-full items-end text-[22px] leading-[28px] font-medium'>{person.name}</p>
                         <p className='items-end text-xs tracking-[5px] uppercase'>Visitors</p>
                     </div>
                 </div>
