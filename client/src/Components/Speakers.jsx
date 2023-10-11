@@ -121,7 +121,7 @@ const Speakers = () => {
         {/* <img src={divider} alt="divider" className="w-20 mt-5" /> */}
       </div>
 
-      <div className="mb-40">
+      <div className="mb-64">
         <Carousel speakers={speakers} />
       </div>
     </>
