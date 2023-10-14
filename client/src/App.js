@@ -7,8 +7,8 @@ import Reservation from './Components/Booking';
 import RenderMenu from './Components/Menu';
 import RenderTestimonials from './Components/Testimonials';
 import Footer from './Components/footer';
-// import Carousel from './Components/carousel';
-import Speakers from './Components/Speakers';
+
+import RenderBlogPosts from './Components/Blog';
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
       <Reservation ></Reservation>
       <RenderMenu ></RenderMenu>
       <RenderTestimonials ></RenderTestimonials>
-      <Speakers></Speakers>
+      <RenderBlogPosts></RenderBlogPosts>
       <Footer></Footer>
     </div>
   );
