@@ -91,7 +91,7 @@ const Footer = () => {
 
 const ContactDetailsCard = () => {
   return (
-    <div className="bg-white border flex flex-col gap-5 absolute w-[88%] 2xl:w-[65%] items-center justify-center p-4 transform -translate-y-1/2 -translate-x-0 md:flex-row">
+    <div className="bg-white border flex flex-col gap-5 absolute w-[90%] 2xl:w-[65%] items-center justify-center p-4 transform -translate-y-1/2 -translate-x-0 md:flex-row">
       <div className="text-center p-6 bg-[#E9F5FF] shadow-sm flex flex-col items-center h-full w-full ">
         <div className="bg-white w-[68px] h-[72px] flex items-center justify-center ">
           <ImMap2 className="text-[36px] text-[rgb(88,105,130)]"></ImMap2>

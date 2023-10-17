@@ -38,7 +38,7 @@ const CommentCard = ({ commentList }) => {
     };
 
     return (
-        <div className='absolute w-[88%] 2xl:w-[65%] bg-white border flex gap-5 p-5 items-center justify-center bottom-0 transform translate-y-1/2 -translate-x-0'>
+        <div className='absolute w-[90%] 2xl:w-[65%] bg-white border flex gap-5 p-5 items-center justify-center bottom-0 transform translate-y-1/2 -translate-x-0'>
             <div className='flex md:hidden xl:hidden'>
                 {renderCommentCards(1)}
             </div>
