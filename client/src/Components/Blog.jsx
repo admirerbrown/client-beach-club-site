@@ -1,7 +1,7 @@
 const RenderBlogPosts = () => {
   return (
-    <div className="flex flex-col w-full h-full md:items-center md:justify-center mt-[20rem] mb-[400px] md:mb-60 px-5 gap-[18px] md:gap-0">
-      <div className="w-full 2xl:w-[65%] text-start xl:px-14">
+    <div className="flex flex-col w-full h-full md:items-center md:justify-center mt-[20rem] mb-[400px] md:mb-60 px-5 gap-[18px] md:gap-0 xl:px-[66px] 2xl:px-0">
+      <div className="w-full 2xl:w-[65%] text-start ">
         <p className="text-start text-lg font-IBM-Plex-Sans tracking-[5px] uppercase text-[#315779] mb-5 md:mb-0">
           Latest blog
         </p>
@@ -23,7 +23,7 @@ const RenderBlogPosts = () => {
             <p className="text-xs font-IBM-Plex-Sans tracking-[5px] uppercase mb-3 text-gray-500">
               october 16, 2023
             </p>
-            <p className="capitalize text-[20px] md:text-[24px] lg:text-[20px] font-Cormorant-Garamond text-[#315779] font-semibold w-full md:w-[85%]">
+            <p className="capitalize text-[20px] md:text-[24px] lg:text-[20px] xl:text-[26px] font-Cormorant-Garamond text-[#315779] font-medium w-full md:w-[85%]">
               the beach club chronicles where luxury meets the ocean
             </p>
             <p className="font-IBM-Plex-Sans text-[14px] lg:text-[16px] w-full text-gray-400 md:w-[85%]">
@@ -36,7 +36,7 @@ const RenderBlogPosts = () => {
             <p className="text-xs font-IBM-Plex-Sans tracking-[5px] uppercase mb-3 text-gray-500">
               August 14, 2023
             </p>
-            <p className="capitalize text-[20px] md:text-[24px] lg:text-[20px] font-Cormorant-Garamond text-[#315779] font-semibold  w-full md:w-[85%]">
+            <p className="capitalize text-[20px] md:text-[24px] lg:text-[20px] xl:text-[26px] font-Cormorant-Garamond text-[#315779] font-medium  w-full md:w-[85%]">
               Paradise Found Exploring the Top Beach resorts Around the World
             </p>
             <p className="font-IBM-Plex-Sans text-gray-400 text-[14px] lg:text-[16px] w-full md:w-[85%]">
@@ -50,7 +50,7 @@ const RenderBlogPosts = () => {
             <p className="text-xs font-IBM-Plex-Sans tracking-[5px] uppercase mb-3 text-gray-500">
               June 28, 2023
             </p>
-            <p className="capitalize text-[20px] md:text-[24px] lg:text-[20px] font-Cormorant-Garamond text-[#315779] font-semibold  w-full md:w-[85%]">
+            <p className="capitalize text-[20px] md:text-[24px] lg:text-[20px] xl:text-[26px] font-Cormorant-Garamond text-[#315779] font-medium  w-full md:w-[85%]">
               Beachside Revelry Unveiling the Hidden Gems of Beach Clubs
             </p>
             <p className="font-IBM-Plex-Sans text-gray-400 text-[14px] lg:text-[16px] w-full md:w-[85%]">
@@ -61,7 +61,7 @@ const RenderBlogPosts = () => {
           </div>
         </div>
 
-        <div className="relative w-full h-[460px] md:h-[640px] xl:h-full object-cover py-7">
+        <div className="relative w-full h-[460px] md:h-[640px] xl:h-[620px] object-cover py-7">
           <img
             src="https://img.freepik.com/free-photo/group-friends-having-fun-during-white-party-with-drinks-by-pool_23-2149485992.jpg?size=626&ext=jpg&ga=GA1.1.865150467.1694076383&semt=ais"
             alt=""
