@@ -7,18 +7,47 @@ import hat from "../assets/hat-glasses-fashion-clothes-clothing-150x150.png";
 import girlies from "../assets/girlies.jpg";
 
 const About = () => {
+  const info = [
+    {
+      icon: pool,
+      title: "stylish pools",
+      summary:
+        "Lengua romance hablada en España y en gran parte de América Central.",
+    },
+    {
+      icon: bottle,
+      title: "exquisite foods",
+      summary:
+        "Lengua romance hablada en España y en gran parte de América Central.",
+    },
+    {
+      icon: sun,
+      title: "amazing views",
+      summary:
+        "Lengua romance hablada en España y en gran parte de América Central.",
+    },
+    {
+      icon: hat,
+      title: "happy hour promo",
+      summary:
+        "Lengua romance hablada en España y en gran parte de América Central.",
+    },
+  ];
   return (
     <div>
       <div className="h-[550px] md:h-[420px] xl:h-[550px] bg-[#E9F5FF] w-full flex justify-center items-center flex-col ">
-        
         <p className=" 2xl:w-[52%] xl:w-[80%] md:px-5 text-[30px] md:text-[31px] mx-6 lg:text-[32px] xl:text-[36px] text-[#315779] mb-10 italic font-Cormorant-Garamond">
           A beach club is a place where sunsets paint the sky with extraordinary
           colors and the sound of waves lulls you into blissful tranquility.
           Where dreams meet reality, and every moment feels like a vacation.
         </p>
         <p className="font-Dr-Sugiyama text-4xl">ThomasHienfiedCook</p>
-        <p className="font-IBM-Plex-Sans font-semibold text-[#315779] text-xl mb-2">Thomas H. Cook</p>
-        <p className="font-IBM-Plex-Sans text-xs tracking-[3px] uppercase text-[#315779]">co. Founder</p>
+        <p className="font-IBM-Plex-Sans font-semibold text-[#315779] text-xl mb-2">
+          Thomas H. Cook
+        </p>
+        <p className="font-IBM-Plex-Sans text-xs tracking-[3px] uppercase text-[#315779]">
+          co. Founder
+        </p>
       </div>
       <div className="w-full  flex 2xl:justify-center">
         <div className="w-full flex flex-col xl:flex-row xl:items-center xl:pt-20 2xl:w-3/4">
@@ -56,77 +85,54 @@ const About = () => {
                 elevate your beach experience at malibu beach club
               </h1>
             </div>
+            
             <div className="xl:flex flex-col gap-5">
               <div className="flex flex-col mx-6 gap-6 md:flex-row">
-                <div className="border border-[rgb(209 213 219)]  btn-breathe">
-                  <div className="font-Cormorant-Garamond h-44 bg-[#E9F5FF] shadow-[0_1px_2px_-1px_rgba(255,255,255,0.3)] m-2 pl-5 pt-3 flex flex-col items-start gap-1 hover:bg-[#A7D6FF]">
-                    <img
-                      className="h-14 bg-white p-2 shadow"
-                      src={pool}
-                      alt="pool badge"
-                    />
-                    <h2 className="capitalize mt-3 text-xl font-semibold  text-[#315779]">
-                      stylish pools
-                    </h2>
-                    <p className="text-base text-start leading-5 pr-6">
-                      Lengua romance hablada en España y en gran parte de
-                      América Central.
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  <div className="border border-[rgb(209 213 219)] btn-breathe">
-                    <div className="font-Cormorant-Garamond h-44 bg-[#E9F5FF] shadow-[0_1px_2px_-1px_rgba(255,255,255,0.3)] m-2 pl-5 pt-3 flex flex-col items-start gap-1 hover:bg-[#A7D6FF]">
+                {info.slice(0, 2).map((item, index) => (
+                  <div
+                    key={index}
+                    className="border border-[rgb(209 213 219)] btn-breathe image-hover"
+                  >
+                    <div className={`font-Cormorant-Garamond h-44 ${index===1 ? 'bg-white' : 'bg-[#E9F5FF]'} shadow-[0_1px_2px_-1px_rgba(255,255,255,0.3)] m-2 pl-5 pt-3 flex flex-col items-start gap-1 hover:bg-[#A7D6FF]`}>
                       <img
-                        className="h-14 bg-white p-2 shadow"
-                        src={bottle}
-                        alt="food icon"
+                        className={`h-14 ${index===1 ? 'bg-[#A7D6FF]' : 'bg-white'}  p-2 shadow`}
+                        src={item.icon}
+                        alt="sunset badge"
                       />
-                      <h2 className="capitalize mt-3 text-xl font-semibold  text-[#315779]">
-                        exquisite foods
+                      <h2 className="capitalize mt-3 text-xl font-semibold text-[#315779]">
+                        {item.title}
                       </h2>
                       <p className="text-base text-start leading-5 pr-6">
-                        Lengua romance hablada en España y en gran parte de
-                        América Central.
+                         {item.summary}
                       </p>
                     </div>
                   </div>
-                </div>
+                ))}
               </div>
+
               <div className="flex flex-col mx-6 gap-6 md:flex-row mt-5 xl:mt-0">
-                <div className="border border-[rgb(209 213 219)] btn-breathe">
-                  <div className="font-Cormorant-Garamond h-44 bg-[#E9F5FF] shadow-[0_1px_2px_-1px_rgba(255,255,255,0.3)] m-2 pl-5 pt-3 flex flex-col items-start gap-1 hover:bg-[#A7D6FF]">
-                    <img
-                      className="h-14 bg-white p-2 shadow"
-                      src={sun}
-                      alt="sunset badge"
-                    />
-                    <h2 className="capitalize mt-3 text-xl font-semibold  text-[#315779]">
-                      amazing views
-                    </h2>
-                    <p className="text-base text-start leading-5 pr-6 ">
-                      Lengua romance hablada en España y en gran parte de
-                      América Central.
-                    </p>
+                {info.slice(2, 4).map((item, index) => (
+                  <div
+                    key={index}
+                    className="border border-[rgb(209 213 219)] btn-breathe image-hover"
+                  >
+                    <div className={`font-Cormorant-Garamond h-44 ${index===0 ? 'bg-white' : 'bg-[#E9F5FF]'} shadow-[0_1px_2px_-1px_rgba(255,255,255,0.3)] m-2 pl-5 pt-3 flex flex-col items-start gap-1 hover:bg-[#A7D6FF]`}>
+                      <img
+                        className={`h-14 ${index===0 ? 'bg-[#A7D6FF]' : 'bg-white'}  p-2 shadow hover:bg-white`}
+                        src={item.icon}
+                        alt="sunset badge"
+                      />
+                      <h2 className="capitalize mt-3 text-xl font-semibold text-[#315779]">
+                       {item.title}
+                      </h2>
+                      <p className="text-base text-start leading-5 pr-6">
+                         {item.summary}
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div className="border border-[rgb(209 213 219)] btn-breathe">
-                  <div className="font-Cormorant-Garamond h-44 bg-[#E9F5FF] shadow-[0_1px_2px_-1px_rgba(255,255,255,0.3)] m-2 pl-5 pt-3 flex flex-col items-start gap-1 hover:bg-[#A7D6FF]">
-                    <img
-                      className="h-14 bg-white p-2 shadow"
-                      src={hat}
-                      alt="fashion badge"
-                    />
-                    <h2 className="capitalize mt-3 text-xl font-semibold  text-[#315779]">
-                      happy hour promo
-                    </h2>
-                    <p className="text-base text-start leading-5 pr-6">
-                      Lengua romance hablada en España y en gran parte de
-                      América Central.
-                    </p>
-                  </div>
-                </div>
+                ))}
               </div>
+
               <div className="navbar-end mb-5 m-6 mt-8 md:w-44">
                 <div className="bg-transparent mr-5 border-[#315779] border btn-breathe hover:border-[#A7D6FF]">
                   <button className="btn-sm bg-[#315779] my-1.5 rounded-none text-base text-white font-IBM-Plex-Sans tracking-widest hover:bg-[#A7D6FF] hover:text-[#315779] ">

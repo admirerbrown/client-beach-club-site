@@ -116,6 +116,9 @@
   height: 450px;
 }
 
+.image-hover:hover img {
+  background-color: white;
+}
 /* .hover-scale:hover {
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
