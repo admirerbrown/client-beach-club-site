@@ -1,5 +1,5 @@
 import React from "react";
-import logo2 from "../assets/logo2.png";
+// import logo2 from "../assets/logo2.png";
 import sun from "../assets/sunrise-sunset-sun-water-sea-ocean-birds-150x150.png";
 import pool from "../assets/pool.png";
 import bottle from "../assets/beer-bottle-drink-beverage-bottles-150x150.png";
@@ -9,15 +9,16 @@ import girlies from "../assets/girlies.jpg";
 const About = () => {
   return (
     <div>
-      <div className="new-height bg-[#E9F5FF] w-full flex justify-center items-center flex-col ">
-        <div className="h-96 w-96 object-cover flex">
-          <img src={logo2} alt="beach-club-badge" />
-        </div>
-        <p className=" text-center absolute 2xl:w-1/2 md:w-4/6 text-2xl mx-6 lg:text-2x md:text-3xl xl:text-3xl text-[#315779] leading-10 font-semibold font-Cormorant-Garamond">
+      <div className="h-[550px] md:h-[420px] xl:h-[550px] bg-[#E9F5FF] w-full flex justify-center items-center flex-col ">
+        
+        <p className=" 2xl:w-[52%] xl:w-[80%] md:px-5 text-[30px] md:text-[31px] mx-6 lg:text-[32px] xl:text-[36px] text-[#315779] mb-10 italic font-Cormorant-Garamond">
           A beach club is a place where sunsets paint the sky with extraordinary
           colors and the sound of waves lulls you into blissful tranquility.
           Where dreams meet reality, and every moment feels like a vacation.
         </p>
+        <p className="font-Dr-Sugiyama text-4xl">ThomasHienfiedCook</p>
+        <p className="font-IBM-Plex-Sans font-semibold text-[#315779] text-xl mb-2">Thomas H. Cook</p>
+        <p className="font-IBM-Plex-Sans text-xs tracking-[3px] uppercase text-[#315779]">co. Founder</p>
       </div>
       <div className="w-full  flex 2xl:justify-center">
         <div className="w-full flex flex-col xl:flex-row xl:items-center xl:pt-20 2xl:w-3/4">

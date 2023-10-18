@@ -75,6 +75,3 @@ const RenderBlogPosts = () => {
 };
 
 export default RenderBlogPosts;
-
-//TODO: MAKE BLOG COMPONENT RESPONSIVE on xl and 2xl
-//TODO: ADD A DARK OVERLAY TO IMAGE AND ALSO ADD TEXT
