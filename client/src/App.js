@@ -16,12 +16,12 @@ function App() {
       <Hero></Hero>
       <About></About>
       <Activities></Activities>
-      <Offerings></Offerings>
-      <Reservation ></Reservation>
-      <RenderMenu ></RenderMenu>
-      <RenderTestimonials ></RenderTestimonials>
-      <RenderBlogPosts></RenderBlogPosts>
-      <Footer></Footer>
+      {/* <Offerings></Offerings> */}
+      {/* <Reservation ></Reservation> */}
+      {/* <RenderMenu ></RenderMenu> */}
+      {/* <RenderTestimonials ></RenderTestimonials> */}
+      {/* <RenderBlogPosts></RenderBlogPosts> */}
+      {/* <Footer></Footer> */}
     </div>
   );
 }

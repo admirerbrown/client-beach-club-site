@@ -4,13 +4,10 @@ import friends from "../assets/friends.jpg";
 const Carousel = () => {
   const [hoveredImage, setHoveredImage] = useState("");
 
-  const handleMouseOver = (image) => {
+  const handleMouseOver = (image, index) => {
     setHoveredImage(image);
+    console.log({index, image})
   };
-
-  // const handleMouseOut = () => {
-  //   setHoveredImage(); // Reset the hoveredImage when moving out of the grid
-  // };
 
   const carouselItems = [
     {
@@ -44,12 +41,11 @@ const Carousel = () => {
 
   return (
     <div
-      className={`"border border-red-700 carousel-height object-cover shadow-md relative " ${
-        hoveredImage ? "img-hover-zoom--blur" : ""
-      }`}
+      className={`"border border-red-700 carousel-height object-cover shadow-md relative " ${hoveredImage ? "img-hover-zoom--blur" : ""
+        }`}
     >
       {hoveredImage && (
-        <div className={` ${hoveredImage ? "img-hover-zoom" : ""}`}>
+        <div className={` ${hoveredImage ? "img-hover-zoom  " : ""}`}>
           <img
             src={hoveredImage}
             alt="Hovered"
@@ -59,16 +55,15 @@ const Carousel = () => {
       )}
 
       <div className="absolute grid grid-cols-4 carousel-height col-width1 overflow-hidden ">
-        {carouselItems.map((item) => (
+        {carouselItems.map((item, index) => (
           <div
             key={item.id}
             className="carousel-item flex flex-col border border-purple-700 relative "
-            onMouseOver={() => handleMouseOver(item.image)}
+            onMouseOver={() => handleMouseOver(item.image, index)}
           >
             <div
-              className={`banner h-40 ${
-                hoveredImage === item.image ? "bg-[#E9F5FF]" : ""
-              }`}
+              className={`banner h-40 ${hoveredImage === item.image ? "bg-[#E9F5FF]" : ""
+                }`}
             >
               <h3 className="font-IBM-Plex-Sans font-normal mt-11 text-xl tracking-widest">
                 {item.title}
@@ -79,15 +74,14 @@ const Carousel = () => {
             </div>
 
             <div
-              className={`absolute inset-0 bg-blue-700 ${
-                hoveredImage === item.image
+              className={`absolute inset-0 bg-blue-700 ${hoveredImage === item.image
                   ? "duce opacity-5 "
                   : "hover04 opacity-60"
-              }`}
+                }`}
             ></div>
 
             {hoveredImage === item.image && (
-              <div className="overlay absolute inset-0 bg-blue-700 opacity-50"></div>
+              <div className="overlay absolute inset-0 bg-orange-700 opacity-50"></div>
             )}
           </div>
         ))}

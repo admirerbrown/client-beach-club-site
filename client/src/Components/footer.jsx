@@ -9,7 +9,6 @@ import { RiWhatsappFill } from "react-icons/ri";
 import { ImMap2 } from "react-icons/im";
 import { LuMailOpen } from "react-icons/lu";
 
-
 const Footer = () => {
   return (
     <footer className="flex flex-col p-5 bg-[#315779] text-stone-200 text-sm w-full items-center ">
@@ -36,23 +35,39 @@ const Footer = () => {
               Quick Links
             </header>
 
-            <a href='#home' className="link link-hover hover:no-underline">About</a>
-            <a href='#home' className="link link-hover hover:no-underline">Menu</a>
-            <a href='#home' className="link link-hover hover:no-underline">Offers</a>
-            <a href='#home' className="link link-hover hover:no-underline">Activities</a>
-            <a href='#home' className="link link-hover hover:no-underline">Blog</a>
+            <a href="#home" className="link link-hover hover:no-underline">
+              About
+            </a>
+            <a href="#home" className="link link-hover hover:no-underline">
+              Menu
+            </a>
+            <a href="#home" className="link link-hover hover:no-underline">
+              Offers
+            </a>
+            <a href="#home" className="link link-hover hover:no-underline">
+              Activities
+            </a>
+            <a href="#home" className="link link-hover hover:no-underline">
+              Blog
+            </a>
           </nav>
           <nav className="flex flex-col text-left gap-3 w-full">
             <header className="font-Cormorant-Garamond capitalize text-xl text-white font-medium mb-2">
               Support
             </header>
-            <a href='#home' className="link link-hover hover:no-underline">Disclaimer</a>
-            <a href='#home' className="link link-hover hover:no-underline">Help Center</a>
-            <a href='#home' className="link link-hover hover:no-underline">
+            <a href="#home" className="link link-hover hover:no-underline">
+              Disclaimer
+            </a>
+            <a href="#home" className="link link-hover hover:no-underline">
+              Help Center
+            </a>
+            <a href="#home" className="link link-hover hover:no-underline">
               Legal Information
             </a>
-            <a href='#home' className="link link-hover hover:no-underline">Privacy Policy</a>
-            <a href='#home' className="link link-hover hover:no-underline">
+            <a href="#home" className="link link-hover hover:no-underline">
+              Privacy Policy
+            </a>
+            <a href="#home" className="link link-hover hover:no-underline">
               Term & Condition
             </a>
           </nav>
