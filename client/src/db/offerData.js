@@ -1,3 +1,8 @@
+ import sun from "../assets/sunrise-sunset-sun-water-sea-ocean-birds-150x150.png";
+import pool from "../assets/pool.png";
+import bottle from "../assets/beer-bottle-drink-beverage-bottles-150x150.png";
+import hat from "../assets/hat-glasses-fashion-clothes-clothing-150x150.png";
+ 
  export const offers = [
     {
       imageUrl:
@@ -19,5 +24,33 @@
       title: "The Tranquil Retreat",
       description: "Quis autem vel eum iure reprehenderit qui voluptatares.",
       peopleData: [{ text1: "5-10 Person" }, { text2: "$250 Min Spend" }],
+    },
+  ];
+
+  export const info = [
+    
+    {
+      icon: bottle,
+      title: "exquisite foods",
+      summary:
+        "Lengua romance hablada en España y en gran parte de Central. y en gran parte",
+    },
+    {
+      icon: pool,
+      title: "stylish pools",
+      summary:
+        "Lengua romance hablada en España y en gran parte de Central. y en gran parte",
+    },
+    {
+      icon: sun,
+      title: "amazing views",
+      summary:
+        "Lengua romance hablada en España y en gran parte de Central. y en gran parte",
+    },
+    {
+      icon: hat,
+      title: "happy hour promo",
+      summary:
+        "Lengua romance hablada en España y en gran parte de Central. y en gran parte",
     },
   ];

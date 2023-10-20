@@ -1,4 +1,4 @@
-import Carousel from "./carousel";
+// import Carousel from "./carousel";
 const Activities = () => {
   return (
     <div className=" bg-height  bg-[#E9F5FF] w-full mt-40 p-12">
