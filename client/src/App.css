@@ -160,3 +160,15 @@
   transform: scale(1);
 } */
 
+
+/* navbar animation */
+.slide-in {
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+
+.slide-out {
+  width: 0;
+  transition: transform 0.5s ease; 
+}
