@@ -47,7 +47,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="absolute w-full h-24">
+      <div className="absolute w-full">
         <NavBar></NavBar>
       </div>
     </div>
