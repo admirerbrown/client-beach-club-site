@@ -7,29 +7,29 @@ const NavBar = () => {
       <input id="my-drawer" type="checkbox" className="drawer-toggle" />
 
       <div className="drawer-content w-full flex">
-      <div className=" w-full flex items-center justify-between bg-[rgb(212,212,216,.1)] h-24 shadow-sm border-b backdrop-blur-md border-[#96989B] border-solid z-10">
-        <div className=" flex">
-          <a href="#home" className="btn btn-ghost normal-case text-5xl text-slate-200 font-Cormorant-Garamond italic">
-            Karibu
-          </a>
-        </div>
-        
-        <div className="hidden lg:flex">
-          <NavItems></NavItems>
-        </div>
-        <div className=" hidden lg:flex bg-transparent mr-5 border-[rgb(238,242,255,.3)] border btn-breathe hover:border-[#A7D6FF]">
-          <button className="btn-sm px-4 h-10 w-[150px] bg-[#69727d] m-1.5 rounded-none text-base text-white font-IBM-Plex-Sans tracking-widest hover:bg-[#A7D6FF] hover:text-[#315779] ">
-            BOOK NOW!
-          </button>
-        </div>
+        <div className=" w-full flex items-center justify-between bg-[rgb(212,212,216,.1)] h-24 shadow-sm border-b backdrop-blur-md border-[#96989B] border-solid z-10">
+          <div className=" flex">
+            <a href="#home" className="btn btn-ghost normal-case text-5xl text-slate-200 font-Cormorant-Garamond italic">
+              Karibu
+            </a>
+          </div>
 
-        <label htmlFor="my-drawer" className=" flex lg:hidden btn btn-sm bg-white mr-5 hover:bg-[#A7D6FF] rounded-none drawer-button h-12">
-          <MdMenu className="my-drawer drawer-button text-[26px] text-slate-500"></MdMenu>
-        </label>
+          <div className="hidden lg:flex">
+            <NavItems></NavItems>
+          </div>
+          <div className=" hidden lg:flex bg-transparent mr-5 border-[rgb(238,242,255,.3)] border btn-breathe hover:border-[#A7D6FF]">
+            <button className="btn-sm px-4 h-10 w-[150px] bg-[#69727d] m-1.5 rounded-none text-base text-white font-IBM-Plex-Sans tracking-widest hover:bg-[#A7D6FF] hover:text-[#315779] ">
+              BOOK NOW!
+            </button>
+          </div>
+
+          <label htmlFor="my-drawer" className=" flex lg:hidden btn btn-sm bg-white mr-5 hover:bg-[#A7D6FF] rounded-none drawer-button h-12">
+            <MdMenu className="my-drawer drawer-button text-[26px] text-slate-500"></MdMenu>
+          </label>
+        </div>
       </div>
-    </div>
 
-      
+
       <div className="drawer-side z-10">
         <label
           htmlFor="my-drawer"
@@ -48,7 +48,7 @@ const NavBar = () => {
           </div>
 
           <div className=" flex lg:hidden">
-          <NavItems></NavItems>
+            <NavItems></NavItems>
 
           </div>
         </div>
