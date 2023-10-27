@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import friends from "../assets/friends.jpg";
-import {carouselItems} from "../db/carouselItems";
+import { carouselItems } from "../db/carouselItems";
 
-// const Carousel = () => {
-//   const [hoveredImage, setHoveredImage] = useState("");
+// const boobs = () => {
+// const [hoveredImage, setHoveredImage] = useState("");
 
-//   const handleMouseOver = (image, index) => {
-//     setHoveredImage(image);
-//     console.log({index, image})
-//   };
+// const handleMouseOver = (image, index) => {
+//   // setHoveredImage(image);
+//   console.log({index, image})
+// };
 
 //   const carouselItems = [
 //     {
@@ -40,7 +40,7 @@ import {carouselItems} from "../db/carouselItems";
 //     },
 //   ];
 
-//   return (
+// return (
 //     <div
 //       className={`"border border-red-700 carousel-height object-cover shadow-md relative " ${hoveredImage ? "img-hover-zoom--blur" : ""
 //         }`}
@@ -98,13 +98,20 @@ import {carouselItems} from "../db/carouselItems";
 // TODO: CHANGE THE HEIGHT OF THE ABOUT SECTION WHICH GOT DESTROYED WHEN NEWHIEGHT WAS CHANGED
 
 function Carousel() {
-    const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [previousImageIndex, setPreviousImageIndex] = useState();
+  const [isHovered, setIsHovered] = useState(false);
+
+  const checkHovered=()=>{
+    setIsHovered(true);
+    console.log(true)
+  }
 
   const handleMouseHover = (index) => {
     if (index !== activeImageIndex) {
       setPreviousImageIndex(activeImageIndex);
       setActiveImageIndex(index);
+      
     }
   };
 
@@ -126,20 +133,22 @@ function Carousel() {
             />
           ))}
         </div>
-        <div className="absolute z-10 grid grid-cols-1 h-[2000px] md:h-[1500px] md:grid-cols-2 lg:grid-rows-2 xl:grid-cols-4 lg:h-[900px] xl:h-[750px] md:w-[95%] w-[92%] overflow-hidden">
-          {carouselItems.map((_, index) => (
-          <div
-            key={index}
-            className={` xl:h-[750px] border border-red-500 bg-[rgb(236,246,255,0.2)] ${
-              index === activeImageIndex ? 'active' : ''
-            }`}
-            onMouseEnter={() => handleMouseHover(index)}
-          >
-            {index + 1}
-          </div>
-        ))}
+        <div className=" absolute bg-[rgb(236,246,255,0.2)] z-10 grid grid-cols-1 h-[2000px] md:h-[1500px] md:grid-cols-2 lg:grid-rows-2 xl:grid-cols-4 lg:h-[900px] xl:h-[750px] md:w-[95%] w-[92%] overflow-hidden">
+          {carouselItems.map((item, index) => (
+            <div key={index} className={` xl:h-[750px] opacity-60 border  ${index === activeImageIndex ? 'active transform transition-transform duration-700' : 'inset-0 bg-[rgb(0, 119, 190)] '}`} onMouseEnter={() => handleMouseHover(index)}>
+              <div className={` ${index=== activeImageIndex?"overlay absolute inset-0 opacity-40 hover:translate-y-[21.5%] bg-slate-500":'overlay '}`}></div>
+              <div className={`banner  ${index === activeImageIndex ? "" : ""}`}>
+                <h3 className="font-IBM-Plex-Sans font-normal text-xl tracking-widest ">
+                  {item.title}
+                </h3>
+                <h1 className="capitalize font-semibold text-2xl">
+                  {item.description}
+                </h1>
+              </div>
+            </div>
+          ))}
         </div>
-        
+
       </div>
 
     </div>
