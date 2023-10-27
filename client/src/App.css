@@ -140,8 +140,8 @@
 
 /* carousel animation */
 .frame {
-  height: 750px;
-  width: 92%;
+  /* height: 750px;
+  width: 92%; */
   overflow: hidden;
   transform-origin: center;
 }

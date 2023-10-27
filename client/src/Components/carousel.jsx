@@ -101,7 +101,7 @@ function Carousel() {
     const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [previousImageIndex, setPreviousImageIndex] = useState();
 
-  const handleImageChange = (index) => {
+  const handleMouseHover = (index) => {
     if (index !== activeImageIndex) {
       setPreviousImageIndex(activeImageIndex);
       setActiveImageIndex(index);
@@ -109,9 +109,9 @@ function Carousel() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center gap-10">
+    <div className="flex flex-col justify-center items-center gap-10 ">
       <div className="flex flex-col justify-center items-center w-full h-full gap-20">
-        <div className="relative border border-emerald-500 frame zoomout">
+        <div className="relative overflow-hidden border  border-emerald-500 w-[92%] md:w-[95%] h-[2000px] md:h-[1500px] lg:h-[900px] xl:h-[750px] frame zoomout">
           {carouselItems.map((item, index) => (
             <img
               key={index}
@@ -126,17 +126,17 @@ function Carousel() {
             />
           ))}
         </div>
-        <div className="flex gap-10">
+        <div className="absolute z-10 grid grid-cols-1 h-[2000px] md:h-[1500px] md:grid-cols-2 lg:grid-rows-2 xl:grid-cols-4 lg:h-[900px] xl:h-[750px] md:w-[95%] w-[92%] overflow-hidden">
           {carouselItems.map((_, index) => (
-          <button
+          <div
             key={index}
-            className={`btn btn-lg mt-5 ${
+            className={` xl:h-[750px] border border-red-500 bg-[rgb(236,246,255,0.2)] ${
               index === activeImageIndex ? 'active' : ''
             }`}
-            onClick={() => handleImageChange(index)}
+            onMouseEnter={() => handleMouseHover(index)}
           >
             {index + 1}
-          </button>
+          </div>
         ))}
         </div>
         
