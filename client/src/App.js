@@ -16,8 +16,7 @@ function App() {
       <Hero></Hero>
       <About></About>
       <Activities></Activities>
-      <Carousel></Carousel>
-      {/* <Offerings></Offerings> */}
+      <Offerings></Offerings>
       {/* <Reservation ></Reservation> */}
       {/* <RenderMenu ></RenderMenu> */}
       {/* <RenderTestimonials ></RenderTestimonials> */}

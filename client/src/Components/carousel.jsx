@@ -1,124 +1,32 @@
 import React, { useState } from "react";
-import friends from "../assets/friends.jpg";
 import { carouselItems } from "../db/carouselItems";
 
-// const boobs = () => {
-// const [hoveredImage, setHoveredImage] = useState("");
-
-// const handleMouseOver = (image, index) => {
-//   // setHoveredImage(image);
-//   console.log({index, image})
-// };
-
-//   const carouselItems = [
-//     {
-//       id: 1,
-//       title: "MALIBU BEACH CLUB",
-//       description: "resting fun at beach",
-//       image: friends,
-//     },
-//     {
-//       id: 2,
-//       title: "MALIBU BEACH CLUB",
-//       description: "resting fun at beach",
-//       image:
-//         "https://img.freepik.com/free-photo/young-friends-smiling-rejoicing-resting-party-near-swimming-pool_176420-1385.jpg?size=626&ext=jpg&ga=GA1.2.865150467.1694076383&semt=sph",
-//     },
-//     {
-//       id: 3,
-//       title: "MALIBU BEACH CLUB",
-//       description: "resting fun at beach",
-//       image:
-//         "https://img.freepik.com/premium-photo/group-happy-people-party-outdoors_495423-37279.jpg?size=626&ext=jpg&ga=GA1.1.865150467.1694076383&semt=sph",
-//     },
-//     {
-//       id: 4,
-//       title: "MALIBU BEACH CLUB",
-//       description: "resting fun at beach",
-//       image:
-//         "https://img.freepik.com/premium-photo/group-friends-swimsuit-enjoy-swimming-pool_207634-6725.jpg?size=626&ext=jpg&ga=GA1.1.865150467.1694076383&semt=sph",
-//     },
-//   ];
-
-// return (
-//     <div
-//       className={`"border border-red-700 carousel-height object-cover shadow-md relative " ${hoveredImage ? "img-hover-zoom--blur" : ""
-//         }`}
-//     >
-//       {hoveredImage && (
-//         <div className={` ${hoveredImage ? "img-hover-zoom  " : ""}`}>
-//           <img
-//             src={hoveredImage}
-//             alt="Hovered"
-//             className="hovered-image w-full carousel-height "
-//           />
-//         </div>
-//       )}
-
-//       <div className="absolute grid grid-cols-4 carousel-height col-width1 overflow-hidden ">
-//         {carouselItems.map((item, index) => (
-//           <div
-//             key={item.id}
-//             className="carousel-item flex flex-col border border-purple-700 relative "
-//             onMouseOver={() => handleMouseOver(item.image, index)}
-//           >
-//             <div
-//               className={`banner h-40 ${hoveredImage === item.image ? "bg-[#E9F5FF]" : ""
-//                 }`}
-//             >
-//               <h3 className="font-IBM-Plex-Sans font-normal mt-11 text-xl tracking-widest">
-//                 {item.title}
-//               </h3>
-//               <h1 className="capitalize font-semibold text-2xl">
-//                 {item.description}
-//               </h1>
-//             </div>
-
-//             <div
-//               className={`absolute inset-0 bg-blue-700 ${hoveredImage === item.image
-//                   ? "duce opacity-5 "
-//                   : "hover04 opacity-60"
-//                 }`}
-//             ></div>
-
-//             {hoveredImage === item.image && (
-//               <div className="overlay absolute inset-0 bg-orange-700 opacity-50"></div>
-//             )}
-//           </div>
-//         ))}
-//       </div>
-
-//     </div>
-//   );
-// };
-
-// export default Carousel;
-
-// TODO: CAROUSEL STILL NOT PERFECT AND NEEDS FIX
-// TODO: CHANGE THE HEIGHT OF THE ABOUT SECTION WHICH GOT DESTROYED WHEN NEWHIEGHT WAS CHANGED
-
 function Carousel() {
-  const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [activeImageIndex, setActiveImageIndex] = useState();
   const [previousImageIndex, setPreviousImageIndex] = useState();
   const [isHovered, setIsHovered] = useState(false);
-
-  const checkHovered=()=>{
-    setIsHovered(true);
-    console.log(true)
-  }
 
   const handleMouseHover = (index) => {
     if (index !== activeImageIndex) {
       setPreviousImageIndex(activeImageIndex);
       setActiveImageIndex(index);
-      
+      setIsHovered(true);
+      console.log({ isHovered });
     }
   };
 
+  const handleMouseOut = () => {
+    // setActiveImageIndex(); // Not sure if you want to reset activeImageIndex
+    // setIsHovered(false);
+    // console.log({ activeImageIndex, isHovered });
+  };
+
+
+
   return (
-    <div className="flex flex-col justify-center items-center gap-10 ">
-      <div className="flex flex-col justify-center items-center w-full h-full gap-20">
-        <div className="relative overflow-hidden border  border-emerald-500 w-[92%] md:w-[95%] h-[2000px] md:h-[1500px] lg:h-[900px] xl:h-[750px] frame zoomout">
+    <div className="flex flex-col justify-center items-center gap-10">
+      <div className="flex flex-col justify-center items-center w-full h-full gap-20 2xl:mx-10">
+        <div className="relative overflow-hidden  w-[92%] md:w-[95%] 2xl:w-[91%] h-[2000px] md:h-[1500px] lg:h-[900px] xl:h-[800px] frame zoomout">
           {carouselItems.map((item, index) => (
             <img
               key={index}
@@ -133,24 +41,23 @@ function Carousel() {
             />
           ))}
         </div>
-        <div className=" absolute bg-[rgb(236,246,255,0.2)] z-10 grid grid-cols-1 h-[2000px] md:h-[1500px] md:grid-cols-2 lg:grid-rows-2 xl:grid-cols-4 lg:h-[900px] xl:h-[750px] md:w-[95%] w-[92%] overflow-hidden">
+        <div className=" absolute bg-[rgb(236,246,255,0.2)] z-10 grid grid-cols-1 h-[2000px] md:h-[1500px] md:grid-cols-2 lg:grid-rows-2 xl:grid-cols-4 lg:h-[900px] xl:h-[800px] md:w-[95%] w-[92%] 2xl:w-[91%]  overflow-hidden">
           {carouselItems.map((item, index) => (
-            <div key={index} className={` xl:h-[750px] opacity-60 border  ${index === activeImageIndex ? 'active transform transition-transform duration-700' : 'inset-0 bg-[rgb(0, 119, 190)] '}`} onMouseEnter={() => handleMouseHover(index)}>
-              <div className={` ${index=== activeImageIndex?"overlay absolute inset-0 opacity-40 hover:translate-y-[21.5%] bg-slate-500":'overlay '}`}></div>
-              <div className={`banner  ${index === activeImageIndex ? "" : ""}`}>
-                <h3 className="font-IBM-Plex-Sans font-normal text-xl tracking-widest ">
+            <div key={index} className={` xl:h-[800px] opacity-60 border border-[rgb(236,246,255,0.5)] ${index === activeImageIndex ? ' transform transition-transform duration-700' : ''}`} onMouseEnter={() => handleMouseHover(index)} onMouseOut={handleMouseOut}>
+              <div className={` ${index === activeImageIndex ? "overlay absolute inset-0 opacity-40  bg-slate-500" : ''}`}></div>
+
+              <div className={`flex flex-col gap-3 pt-10 text-[#315779] ${index === activeImageIndex ? "bg-[#E9F5FF] h-40" : ""}`}>
+                <h3 className="font-IBM-Plex-Sans text-xs tracking-[4px]">
                   {item.title}
                 </h3>
-                <h1 className="capitalize font-semibold text-2xl">
-                  {item.description}
-                </h1>
+                <h1 className="capitalize font-Cormorant-Garamond font-medium text-2xl">{item.description}</h1>
               </div>
+
             </div>
           ))}
         </div>
 
       </div>
-
     </div>
   );
 }
