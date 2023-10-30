@@ -39,10 +39,10 @@ const InfoBadge = ({ item, index }) => (
         src={item.icon}
         alt="sunset badge"
       />
-      <h2 className="capitalize mt-3 text-xl xl:text-[26px] md:text-[22px] font-semibold xl:font-medium text-[#315779]">
+      <h2 className="capitalize mt-3 text-xl xl:text-[26px] md:text-[22px] font-semibold md:font-medium text-[#315779]">
         {item.title}
       </h2>
-      <p className="text-sm md:text-base font-IBM-Plex-Sans text-gray-400 text-start leading-5">
+      <p className="text-sm md:text-base lg:text-[15px] font-IBM-Plex-Sans text-gray-400 text-start leading-5">
         {item.summary}
       </p>
     </div>
@@ -52,7 +52,7 @@ const InfoBadge = ({ item, index }) => (
 const RenderAttractions = ({ info }) => (
   <div className="w-full flex 2xl:justify-center">
     <div className="w-full flex flex-col xl:flex-row xl:items-center xl:pt-20 2xl:w-3/4">
-      <div className="flex flex-col gap-5 mt-14 m-6 md:gap-7 ">
+      <div className="flex flex-col gap-5 mt-14 m-6 md:gap-7 xl:ml-[50px]">
         <div className="img1 h-52 object-cover md:h-[470px]">
           <img
             className="h-full w-full"
@@ -79,30 +79,30 @@ const RenderAttractions = ({ info }) => (
       </div>
 
       <div>
-        <div className="flex flex-col items-start m-6 gap-7 text-[#315779] lg:pt-12">
-          <h2 className="font-IBM-Plex-Sans text-sm md:text-lg tracking-[0.2rem]">
+        <div className="flex flex-col items-start m-6 gap-7 text-[#315779] ">
+          <h2 className="font-IBM-Plex-Sans text-lg font-medium md:text-[16px] md:tracking-[0.2rem] ">
             WHY CHOOSE MALIBU
           </h2>
-          <h1 className="font-Cormorant-Garamond capitalize font-medium text-3xl md:text-4xl xl:text-5xl text-start pr-6 mb-2 leading-10 xl:leading-tight xl:font-medium">
+          <h1 className="font-Cormorant-Garamond capitalize font-medium text-[34px] md:text-[38px] lg:text-[41px] xl:text-[50px] text-start pr-6 mb-2 leading-10 xl:leading-tight xl:font-medium">
             elevate your beach experience at malibu beach club
           </h1>
         </div>
 
         <div className="xl:flex flex-col gap-5">
-          <div className="flex flex-col-reverse mx-6 gap-6  md:flex-row-reverse xl:pr-10 2xl:mr-32">
+          <div className="flex flex-col-reverse mx-6 gap-6 md:gap-8 md:flex-row-reverse xl:pr-6 2xl:mr-32">
             {info.slice(0, 2).map((item, index) => (
               <InfoBadge key={index} item={item} index={index} />
             ))}
           </div>
 
-          <div className="flex flex-col mx-6 gap-6 md:flex-row mt-5 xl:mt-0 xl:pr-10 2xl:mr-32">
+          <div className="flex flex-col mx-6  gap-6 md:gap-8 md:flex-row mt-5 xl:mt-0 xl:pr-6 2xl:mr-32">
             {info.slice(2, 4).map((item, index) => (
               <InfoBadge key={index} item={item} index={index} />
             ))}
           </div>
 
-          <div className="ml-5 w-[40%] xl:w-3/12 md:w-[170px] mb-10 lg:mb-8 lg:bg-transparent px-1 mt-8 border-[#315779] border btn-breathe hover:border-[#A7D6FF]">
-            <button className="w-full h-10 btn-sm md:btn-md lg:btn-sm lg:h-10 bg-[#315779] my-1 rounded-none md:text-base lg:text-sm text-sm text-white font-IBM-Plex-Sans tracking-widest hover-bg-[#A7D6FF] hover-text-[#315779]">
+          <div className="ml-5 w-[40%] xl:w-[25%] 2xl:w-[22%] md:w-[170px] mb-10 lg:mb-8 lg:bg-transparent px-1 mt-10 xl:mt-5 xl:mb-4 border-[#315779] border btn-breathe hover:border-[#A7D6FF]">
+            <button className="w-full h-10 btn-sm tracking-[0.2rem] md:btn-md md:w-[160px] xl:w-[164px] 2xl:w-[160px] lg:h-12 bg-[#315779] my-1 rounded-none lg:text-sm text-sm md:text-xs text-white font-IBM-Plex-Sans hover:bg-[#A7D6FF] hover:text-[#315779]">
               LEARN MORE
             </button>
           </div>

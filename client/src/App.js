@@ -7,7 +7,6 @@ import Reservation from './Components/Booking';
 import RenderMenu from './Components/Menu';
 import RenderTestimonials from './Components/Testimonials';
 import Footer from './Components/footer';
-
 import RenderBlogPosts from './Components/Blog';
 
 function App() {
