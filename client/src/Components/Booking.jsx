@@ -8,7 +8,7 @@ const Reservation = () => {
   return (
     <div className="xl:flex items-center">
       <div className="mt-20 px-5 md:px-12 md:mx-0 bg-[#E9F5FF] lg:mx-0 md:mb-0 pb-7 xl:w-1/2">
-        <h1 className="text-4xl md:text-[40px] pt-14 font-Cormorant-Garamond font-semibold xl:text-5xl  text-[#315779] text-left md:leading-[50px] mb-6 2xl:ml-0">
+        <h1 className="text-4xl md:text-[40px] pt-14 font-Cormorant-Garamond xl:leading-[60px] font-medium xl:pr-20 xl:text-5xl  text-[#315779] text-left md:leading-[50px] mb-6 2xl:ml-0">
           Secure Your Reservation For a Remarkable Experience
         </h1>
         <form className="flex flex-col gap-5 font-Cormorant-Garamond text-base">
@@ -99,7 +99,7 @@ const ImageSlider = () => {
 
   return (
     <div className="w-full h-full xl:mt-[79px]">
-      <div className="h-[450px] xl:h-[618px] object-cover bg-red-800 relative">
+      <div className="h-[450px] xl:h-[700px] 2xl:h-[641px] object-cover bg-red-800 relative">
         {images.map((image, index) => (
           <div
             key={index}
