@@ -16,7 +16,7 @@ function Carousel() {
   };
 
   const handleMouseOut = () => {
-    // setActiveImageIndex(); // Not sure if you want to reset activeImageIndex
+    // setActiveImageIndex(); 
     // setIsHovered(false);
     // console.log({ activeImageIndex, isHovered });
   };
