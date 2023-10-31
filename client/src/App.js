@@ -13,14 +13,14 @@ function App() {
   return (
     <div className="App">
       <Hero></Hero>
-      <About></About>
+      {/* <About></About>
       <Activities></Activities>
       <Offerings></Offerings>
       <Reservation ></Reservation>
       <RenderMenu ></RenderMenu>
       <RenderTestimonials ></RenderTestimonials>
       <RenderBlogPosts></RenderBlogPosts>
-      <Footer></Footer>
+      <Footer></Footer> */}
     </div>
   );
 }
