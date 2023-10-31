@@ -8,22 +8,22 @@ const NavBar = () => {
 
       <div className="drawer-content w-full flex">
         <div className=" w-full flex items-center justify-between bg-[rgb(212,212,216,.1)] h-24 shadow-sm border-b backdrop-blur-md border-[#96989B] border-solid z-10">
-          <div className=" flex">
+          <div className=" flex pl-5">
             <a href="#home" className="btn btn-ghost normal-case text-5xl text-slate-200 font-Cormorant-Garamond italic">
-              Karibu
+              Malibu
             </a>
           </div>
 
-          <div className="hidden lg:flex">
+          <div className="hidden xl:flex">
             <NavItems></NavItems>
           </div>
-          <div className=" hidden lg:flex bg-transparent mr-5 border-[rgb(238,242,255,.3)] border btn-breathe hover:border-[#A7D6FF]">
+          <div className=" hidden xl:flex bg-transparent mr-8 border-[rgb(238,242,255,.3)] border btn-breathe hover:border-[#A7D6FF]">
             <button className="btn-sm px-4 h-10 w-[150px] bg-[#69727d] m-1.5 rounded-none text-base text-white font-IBM-Plex-Sans tracking-widest hover:bg-[#A7D6FF] hover:text-[#315779] ">
               BOOK NOW!
             </button>
           </div>
 
-          <label htmlFor="my-drawer" className=" flex lg:hidden btn btn-sm bg-white mr-5 hover:bg-[#A7D6FF] rounded-none drawer-button h-12">
+          <label htmlFor="my-drawer" className=" flex xl:hidden btn btn-sm bg-white mr-5 hover:bg-[#A7D6FF] rounded-none drawer-button h-12">
             <MdMenu className="my-drawer drawer-button text-[26px] text-slate-500"></MdMenu>
           </label>
         </div>
@@ -40,14 +40,14 @@ const NavBar = () => {
         <div className="p-4 w-[340px] md:w-[360px] min-h-full bg-[#315779] text-base-content">
           <div className="text-left w-full flex justify-between items-center lg:mt-0 mt-10 mb-7 lg:mb-0">
             <a href="#home" className="btn btn-ghost normal-case text-5xl text-slate-200 font-Cormorant-Garamond italic">
-              Karibu
+              Malibu
             </a>
             <label htmlFor="my-drawer" className="w-10">
               <MdOutlineClose className="text-2xl text-center text-slate-400"></MdOutlineClose>
             </label>
           </div>
 
-          <div className=" flex lg:hidden">
+          <div className=" flex xl:hidden">
             <NavItems></NavItems>
 
           </div>
@@ -68,7 +68,7 @@ const NavItems = () => {
 
   return (
     <div className="w-full flex ">
-      <ul className=" w-full  flex flex-col lg:flex-row gap-1 lg:gap-5 px-1 text-slate-300">
+      <ul className=" w-full  flex flex-col xl:flex-row gap-1 lg:gap-5 px-1 text-slate-300">
         <li className=" flex items-center bg-[#A7D6FF] tracking-wide text-base text-[#315779] px-4 py-3 lg:py-1 cursor-pointer ">
           <a href="#home" className="hover:bg-transparent font-IBM-Plex-Sans">HOME</a>
         </li>
@@ -85,7 +85,7 @@ const NavItems = () => {
               <MdKeyboardArrowDown className="text-2xl"></MdKeyboardArrowDown>
             </span>
           </a>
-          <div className={`lg:group-hover:block dropdown-menu absolute ${dropdownOpen ? "block" : "hidden"} h-auto`}>
+          <div className={`xl:group-hover:block dropdown-menu absolute ${dropdownOpen ? "block" : "hidden"} h-auto`}>
             <ul class="top-0 w-48 bg-white px-6 py-8 text-start">
               <li class="py-1 hover:bg-[#E9F5FF] w-full">
                 <a href="#about" class="block font-thin text-base uppercase text-[#707E8B] hover:bg-transparent font-IBM-Plex-Sans cursor-pointer">

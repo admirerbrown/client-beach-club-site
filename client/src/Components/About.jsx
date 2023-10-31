@@ -102,7 +102,7 @@ const RenderAttractions = ({ info }) => (
           </div>
 
           <div className="ml-5 w-[40%] xl:w-[25%] 2xl:w-[22%] md:w-[170px] mb-10 lg:mb-8 lg:bg-transparent px-1 mt-10 xl:mt-5 xl:mb-4 border-[#315779] border btn-breathe hover:border-[#A7D6FF]">
-            <button className="w-full h-10 btn-sm tracking-[0.2rem] md:btn-md md:w-[160px] xl:w-[164px] 2xl:w-[160px] lg:h-12 bg-[#315779] my-1 rounded-none lg:text-sm text-sm md:text-xs text-white font-IBM-Plex-Sans hover:bg-[#A7D6FF] hover:text-[#315779]">
+            <button className="w-full h-10 btn-sm tracking-[0.2rem] md:btn-md md:w-[160px] xl:w-[164px] 2xl:w-[160px] lg:h-12 bg-[#315779] my-1 rounded-none lg:text-sm text-xs md:text-xs text-white font-IBM-Plex-Sans hover:bg-[#A7D6FF] hover:text-[#315779]">
               LEARN MORE
             </button>
           </div>
