@@ -8,7 +8,7 @@ const RenderMenu = () => {
           check our menu
         </h2>
         <h1 className="text-[28px] font-medium xl:font-medium xl:leading-[60px] md:text-4xl xl:text-[43px] 2xl:text-[38px] xl:w-[62%] 2xl:w-1/2 xl:mx-0 xl:text-center md:mx-20 lg:mx-32 text-[#315779] leading-10 md:leading-[50px] mb-6 tracking-widest 2xl:ml-0">
-          Savor the Coastal Delights, Bask in Sunshine, with a Wave of Beach
+          Savor the Coastal Delights, Bask in Sunshine with a Wave of Beach
           Vibes.
         </h1>
       </div>
