@@ -1,4 +1,5 @@
 {
+  "homepage": "https://admirerbrown.github.io/client-beach-club-site",
   "name": "client",
   "version": "0.1.0",
   "private": true,
@@ -18,7 +19,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "postinstall": "node script.js"
+    "postinstall": "node script.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -42,6 +45,7 @@
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@tailwindcss/forms": "^0.5.6",
     "daisyui": "^3.6.3",
+    "gh-pages": "^6.1.0",
     "tailwindcss": "^3.3.3"
   }
 }
