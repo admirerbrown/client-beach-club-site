@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/client-beach-club-site/static/css/main.1b8d111d.css",
+    "main.js": "/client-beach-club-site/static/js/main.7f2b7b02.js",
+    "static/media/backgroundvideo.mp4": "/client-beach-club-site/static/media/backgroundvideo.ae2987bdcd0058b3af7b.mp4",
+    "static/media/teenagers-friends-have-fun-at-holi-festival-beach-party-celebrating-traditional-indian-holiday--e1689672733652.jpg": "/client-beach-club-site/static/media/teenagers-friends-have-fun-at-holi-festival-beach-party-celebrating-traditional-indian-holiday--e1689672733652.e40b6148d934bc76e445.jpg",
+    "static/media/having-a-beach-party-e1689671741453.jpg": "/client-beach-club-site/static/media/having-a-beach-party-e1689671741453.76b2324d12e5c71f04cb.jpg",
+    "static/media/friends-fun.jpg": "/client-beach-club-site/static/media/friends-fun.621b4e67f36c516dcdb7.jpg",
+    "static/media/girlies.jpg": "/client-beach-club-site/static/media/girlies.8a775399f55755f7f0cf.jpg",
+    "index.html": "/client-beach-club-site/index.html",
+    "main.1b8d111d.css.map": "/client-beach-club-site/static/css/main.1b8d111d.css.map",
+    "main.7f2b7b02.js.map": "/client-beach-club-site/static/js/main.7f2b7b02.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1b8d111d.css",
+    "static/js/main.7f2b7b02.js"
+  ]
+}
